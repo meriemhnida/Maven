@@ -5,11 +5,7 @@ pipeline {
         jdk 'jdk1.8.0_151'
     }
     stages {
-        stage ('commencement') {
-            steps {
-            echo "salut"
-                 }
-        }
+        
         stage ('Build') {
             steps {
             bat 'mvn install'
@@ -20,12 +16,14 @@ pipeline {
                 }
             }
         }
-       /*  stage('SonarQube analysis') {
+       stage('SonarQube analysis') {
+            steps {
     withSonarQubeEnv('My SonarQube Server') {
       // requires SonarQube Scanner for Maven 3.2+
       bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
     }
-    }*/
+                 }
+    }
         
 }
     }
