@@ -16,16 +16,18 @@ pipeline {
                 }
             }
         }
-        stage('SonarQube analysis') {
-      tools {
-        sonarQube 'sonar-runner-2.4'
-      }
-      steps {
-        withSonarQubeEnv('SonarQube Scanner') {
-          bat 'sonar-scanner'
+        
+        stage('Sonarqube analysis') {
+    steps {
+    script {
+             scannerHome = tool 'SonarScanner';
         }
-      }
+     withSonarQubeEnv('SonarQube') {
+         bat "${scannerHome}/bin/sonar-scanner.bat" 
     }
+
+    }
+        }
         
 }
     }
