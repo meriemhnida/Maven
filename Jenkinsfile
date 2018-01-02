@@ -26,7 +26,7 @@ pipeline {
          bat "${scannerHome}\bin\sonar-scanner.bat" 
     }
 
-    }
+    } 
         }
         
 }
