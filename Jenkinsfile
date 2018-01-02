@@ -6,7 +6,9 @@ pipeline {
     }
     stages {
         stage ('commencement') {
+            steps {
             echo "salut"
+                 }
         }
         stage ('Build') {
             steps {
