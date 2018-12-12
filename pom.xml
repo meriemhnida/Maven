@@ -8,11 +8,7 @@
 	<name>junitmavenexample</name>
 	<url>http://maven.apache.org</url>
 	<servers>
-     <server>
-       <id>ossrh</id>
-       <username>admin</username>
-       <password>admin</password>
-     </server>
+     
    </servers>
 	<dependencies>
 		<dependency>
@@ -43,14 +39,14 @@
 <distributionManagement>
                 <!-- Publish versioned releases here -->
                 <repository>
-                        <id>1</id>
+                        <id>ossrh</id>
                         <name>maven-releases</name>
                         <url>http://localhost:8081/repository/maven-releases/</url>
                 </repository>
 
                 <!-- Publish snapshots here -->
                 <snapshotRepository>
-                      <id>1</id>
+                      <id>ossrh</id>
                         <name>maven-snapshots</name>
                         <url>http://localhost:8081/repository/maven-snapshots/</url>
                 </snapshotRepository>
