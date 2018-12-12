@@ -34,21 +34,7 @@
 </plugins>
 </build>
 	
-<distributionManagement>
-                <!-- Publish versioned releases here -->
-                <repository>
-                        <id>ossrh</id>
-                        <name>maven-releases</name>
-                        <url>http://localhost:8081/repository/maven-releases/</url>
-                </repository>
 
-                <!-- Publish snapshots here -->
-                <snapshotRepository>
-                      <id>ossrh</id>
-                        <name>maven-snapshots</name>
-                        <url>http://localhost:8081/content/repositories/snapshots</url>
-                </snapshotRepository>
-</distributionManagement>
 <reporting>
     <plugins>
       <plugin>
